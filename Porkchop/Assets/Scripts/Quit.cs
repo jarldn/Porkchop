@@ -7,6 +7,7 @@ public class Quit : MonoBehaviour
     public void doquit()
     {
         Debug.Log("has quit");
+        UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     
