@@ -245,7 +245,7 @@ public class NPCMove : MonoBehaviour
     private void Apuntar()
     {
         Vector3 direction = objetivo.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(direction);
+        Quaternion rotation = Quaternion.LookRotation(-direction);
         transform.rotation = Quaternion.Lerp(transform.rotation, rotation, rotationSpeed * Time.deltaTime);
 
 
@@ -256,22 +256,25 @@ public class NPCMove : MonoBehaviour
 
     private void Atacar()
     {        
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, -transform.forward);
         RaycastHit hit;
+        
+        Vector3 offsetProyectil = new Vector3(0, 0.3f, 0);
         
 
         if (Physics.SphereCast(ray, 0.75f, out hit))
         {
+            //sitioHuevo = transform.position + offset;
             GameObject hitObject = hit.transform.gameObject;
             if (hitObject == objetivo.gameObject && canShoot)
             {
 
                 Debug.Log("tocado");
-                proyectil = Instantiate(huevo, transform.position, Quaternion.identity);
+                proyectil = Instantiate(huevo, transform.position + offsetProyectil, Quaternion.identity);
                 Rigidbody rb = proyectil.GetComponent<Rigidbody>();
                 rb.GetComponent<Huevo>().origen = gameObject;
 
-                rb.AddForce(transform.forward * fuerzaDisparoHorizontal, ForceMode.Impulse);
+                rb.AddForce(-transform.forward * fuerzaDisparoHorizontal, ForceMode.Impulse);
                 rb.AddForce(transform.up * fuerzaDisparoVertical, ForceMode.Impulse);
                 canShoot = false;
 
