@@ -29,6 +29,21 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: "Cintur\xF3n"
     second: {fileID: 2100000, guid: cbdb5b8786d43014a9bad92f439536bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojos
+    second: {fileID: 2100000, guid: bbd66ff0d0135e44984ba47595d3c0a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Pezu\xF1as"
+    second: {fileID: 2100000, guid: 56480279ff1c34442a8ad345365f08cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Piel
+    second: {fileID: 2100000, guid: 206d364a9cead1e438e0d5b8e9595194, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

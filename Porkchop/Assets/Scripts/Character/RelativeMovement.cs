@@ -16,6 +16,7 @@ public class RelativeMovement : MonoBehaviour
     public float gravity = -9.8f;
     public float terminalVelocity = -10.0f;
     public float minFall = -1.5f;
+    public bool bounce = false;
 
     private float _vertSpeed;
 
@@ -69,9 +70,10 @@ public class RelativeMovement : MonoBehaviour
         //if (_charController.isGrounded)
         if (hitGround)
         {
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetButtonDown("Jump") || bounce == true)
             {
                 _vertSpeed = jumpSpeed;
+                bounce = false;
             }
             else
             {

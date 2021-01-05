@@ -205,7 +205,7 @@ public class NPCMove : MonoBehaviour
         canShoot = true;
     }
 
-
+    
 
     private void OnTriggerEnter(Collider other)
     {
