@@ -57,8 +57,8 @@ public class NPCMove : MonoBehaviour
     {
         objetivo = GameObject.FindGameObjectWithTag("Player").transform;
         canShoot = true;
-        fuerzaDisparoHorizontal = 10f;
-        fuerzaDisparoVertical = 2f;
+        //fuerzaDisparoHorizontal = 10f;
+        //fuerzaDisparoVertical = 2f;
 
         navMeshAgent = this.GetComponent<NavMeshAgent>();
         if(navMeshAgent == null)
