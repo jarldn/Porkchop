@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   origen: {fileID: 0}
+  explosionPs: {fileID: 7690350744726852135, guid: 80ffba77b97e2d642b3f7c935d674675,
+    type: 3}
 --- !u!135 &6784197869341774235
 SphereCollider:
   m_ObjectHideFlags: 0
