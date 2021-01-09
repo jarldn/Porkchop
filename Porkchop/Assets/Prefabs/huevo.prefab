@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2195651752985935489}
   - component: {fileID: 3368383263464940930}
   - component: {fileID: 6784197869341774235}
+  - component: {fileID: 4754211655921060339}
   m_Layer: 9
   m_Name: huevo
   m_TagString: Untagged
@@ -97,7 +98,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &3368383263464940930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +123,21 @@ SphereCollider:
   m_GameObject: {fileID: 6679071165754740687}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.0014000433
   m_Center: {x: 0, y: 0.000092795395, z: 0.00005089112}
+--- !u!136 &4754211655921060339
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6679071165754740687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.0015
+  m_Height: 0.0028000867
+  m_Direction: 1
+  m_Center: {x: 7.5833697e-13, y: 0.0000927954, z: 0.000050891133}

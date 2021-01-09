@@ -17,20 +17,26 @@ public class RelativeMovement : MonoBehaviour
     public float terminalVelocity = -10.0f;
     public float minFall = -1.5f;
     public bool bounce = false;
+    Material skin;
 
     private float _vertSpeed;
 
     private ControllerColliderHit _contact;
 
     private Animator _animator;
+    Color piel;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        skin = GetComponentInChildren<Atributos>().skin;
+        piel = GetComponentInChildren<Atributos>().piel;
+
         _charController = GetComponent<CharacterController>();
         _vertSpeed = minFall;
         _animator = GetComponent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -125,6 +131,13 @@ public class RelativeMovement : MonoBehaviour
         {
             Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (_charController.radius) / 1.9f);
         }
+    }
+    public void AlcanzadoFalse()
+    {
+
+        _animator.SetBool("Damaged", false);
+        skin.SetColor("_BaseColor", piel);
+
     }
 
 }

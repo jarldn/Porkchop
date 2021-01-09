@@ -263,7 +263,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 425069995}
+  cameraTransform: {fileID: 52011436}
   rotSpeed: 1.5
+  ajusteCam: {x: 0, y: 0, z: 0}
 --- !u!114 &52011438
 MonoBehaviour:
   m_ObjectHideFlags: 0

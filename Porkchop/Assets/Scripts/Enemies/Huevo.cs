@@ -23,7 +23,7 @@ public class Huevo : MonoBehaviour
     {
 
        
-        Debug.Log("Toca");
+        //Debug.Log("Toca");
         if (other.gameObject != origen)
         {
             Instantiate(explosionPs, transform.position, Quaternion.identity);

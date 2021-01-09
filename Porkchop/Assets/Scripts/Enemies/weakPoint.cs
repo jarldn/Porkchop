@@ -5,7 +5,7 @@ using UnityEngine;
 public class weakPoint : MonoBehaviour
 {
     GameObject gallina;
-    GameObject player;
+    public  GameObject player;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +23,9 @@ public class weakPoint : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            player.GetComponent<RelativeMovement>().bounce = true;
+            
             Debug.Log("Colisión");
+            player.GetComponent<RelativeMovement>().bounce = true;
             Destroy(gallina);
         }
     }

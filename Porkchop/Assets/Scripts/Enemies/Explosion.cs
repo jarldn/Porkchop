@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
+
     ParticleSystem explosion;
     // Start is called before the first frame update
     void Start()
     {
         explosion = GetComponentInChildren<ParticleSystem>();
 
-        var ps = GetComponentsInChildren<ParticleSystem>();
-        foreach (var p in ps)
-            p.Play();
+        //var ps = GetComponentsInChildren<ParticleSystem>();
+        //foreach (var p in ps)
+        //    p.Play();
     }
 
     // Update is called once per frame
@@ -20,7 +21,9 @@ public class Explosion : MonoBehaviour
     {
         if (!explosion.IsAlive())
         {
+            //Debug.Log("Acabado");
             Destroy(this.gameObject);
+            
         }
     }
     
