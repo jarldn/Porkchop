@@ -5,7 +5,7 @@ ModelImporter:
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: chicken_shooting
+    second: shooting_chicken
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,10 +35,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: chicken_shooting
+      name: shooting_chicken
       takeName: Take 001
       internalID: 0
-      firstFrame: 10
+      firstFrame: 1
       lastFrame: 20
       wrapMode: 0
       orientationOffsetY: 0
@@ -46,7 +46,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
