@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 2714f76441431fd439350e1da7645263
+guid: 39125a8ce3adf8b41bb06559cafc58ae
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: 1827226128182048838
-    second: Idle_chicken
+    second: Walking_chicken
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Idle_chicken
+      name: Walking_chicken
       takeName: Take 001
       internalID: 0
       firstFrame: 1
-      lastFrame: 40
+      lastFrame: 21
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
