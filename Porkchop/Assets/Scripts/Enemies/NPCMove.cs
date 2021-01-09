@@ -31,6 +31,10 @@ public class NPCMove : MonoBehaviour
     [SerializeField]
     float fuerzaDisparoVertical;
 
+    Animator animator;
+
+    public Vector3 offsetProyectil = new Vector3(0, 0.3f, 0);
+
 
 
     private enum Estado
@@ -80,6 +84,8 @@ public class NPCMove : MonoBehaviour
             }
             
         }
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -87,19 +93,21 @@ public class NPCMove : MonoBehaviour
     {
         //Debug.Log(puntoActual);
         //Debug.Log(navMeshAgent.isStopped);
-        //Debug.Log(estado);
+        Debug.Log(estado);
 
-       // Buscar();
-      
+        // Buscar();
+
         switch (estado)
         {
             default:
             case Estado.Patrullando:
+                animator.Play("Walking_chicken");
 
-                if(navMeshAgent.remainingDistance <= 1.0f)
+                if (navMeshAgent.remainingDistance <= 0.1f)
                 {
 
                     estado = Estado.Esperando;
+
                 }
 
                 break;
@@ -143,8 +151,11 @@ public class NPCMove : MonoBehaviour
                 }
                 break;
             case Estado.Esperando:
-                if(esperando == false)
-                StartCoroutine (TiempoEspera());
+                animator.Play("Idle");
+                if (esperando == false)
+                    
+
+                StartCoroutine(TiempoEspera());
                 break;
 
         }
@@ -202,6 +213,8 @@ public class NPCMove : MonoBehaviour
         //rb.AddForce(transform.forward * 32f, ForceMode.Impulse);
         //rb.AddForce(transform.up * 8f, ForceMode.Impulse);
         yield return new WaitForSeconds(2f);
+       
+        
         canShoot = true;
     }
 
@@ -259,7 +272,7 @@ public class NPCMove : MonoBehaviour
         Ray ray = new Ray(transform.position, -transform.forward);
         RaycastHit hit;
         
-        Vector3 offsetProyectil = new Vector3(0, 0.3f, 0);
+        
         
 
         if (Physics.SphereCast(ray, 0.75f, out hit))
@@ -269,16 +282,9 @@ public class NPCMove : MonoBehaviour
             if (hitObject == objetivo.gameObject && canShoot)
             {
 
-                //Debug.Log("tocado");
-                proyectil = Instantiate(huevo, transform.position + offsetProyectil, Quaternion.identity);
-                Rigidbody rb = proyectil.GetComponent<Rigidbody>();
-                rb.GetComponent<Huevo>().origen = gameObject;
-
-                rb.AddForce(-transform.forward * fuerzaDisparoHorizontal, ForceMode.Impulse);
-                rb.AddForce(transform.up * fuerzaDisparoVertical, ForceMode.Impulse);
-                canShoot = false;
-
-                StartCoroutine(AtacarCor());
+                animator.SetBool("atacar", true);
+                Debug.Log("tocado");
+             
 
             }
 
@@ -287,6 +293,24 @@ public class NPCMove : MonoBehaviour
         }
 
 
+    }
+
+    public void momentoAtaque()
+    {
+        proyectil = Instantiate(huevo, transform.position + offsetProyectil, Quaternion.identity);
+        Rigidbody rb = proyectil.GetComponent<Rigidbody>();
+        rb.GetComponent<Huevo>().origen = gameObject;
+
+        rb.AddForce(-transform.forward * fuerzaDisparoHorizontal, ForceMode.Impulse);
+        rb.AddForce(transform.up * fuerzaDisparoVertical, ForceMode.Impulse);
+        canShoot = false;
+
+        StartCoroutine(AtacarCor());
+    }
+
+    public void acabaAtacar()
+    {
+        animator.SetBool("atacar", false);
     }
 
     public virtual void OnDrawGizmos()
