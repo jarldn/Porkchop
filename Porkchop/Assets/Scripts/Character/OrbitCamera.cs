@@ -37,7 +37,7 @@ public class OrbitCamera : MonoBehaviour
             }
             else
             {
-                Debug.Log("Detectado");
+                //Debug.Log("Detectado");
                 cameraTransform.localPosition = new Vector3(0, 0, Vector3.Distance(transform.position, hit.point)) + ajusteCam;
             }
             

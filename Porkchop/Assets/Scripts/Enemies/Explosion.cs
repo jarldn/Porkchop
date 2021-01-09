@@ -21,7 +21,7 @@ public class Explosion : MonoBehaviour
     {
         if (!explosion.IsAlive())
         {
-            Debug.Log("Acabado");
+            //Debug.Log("Acabado");
             Destroy(this.gameObject);
             
         }

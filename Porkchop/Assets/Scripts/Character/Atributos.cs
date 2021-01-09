@@ -4,19 +4,27 @@ using UnityEngine;
 
 public class Atributos : MonoBehaviour
 {
-    Color piel;
+    public Color piel;
     public int vida = 3;
     public Material skin;
+    Animator animator;
+   
     // Start is called before the first frame update
     void Start()
     {
-        piel = skin.color;
+        animator = this.GetComponentInParent<Animator>();
+        piel = new Color(0.8773585f, 0.5090335f, 0.7462125f);
+        skin.SetColor("_BaseColor", piel);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (vida <= 0)
+        {
+            
+            animator.SetBool("Die", true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,18 +33,13 @@ public class Atributos : MonoBehaviour
         {
             skin.SetColor("_BaseColor", Color.red);
             Debug.Log("Alcanzado");
-            this.gameObject.GetComponent<Animator>().SetBool("Damaged", true);
+            animator.SetBool("Damaged", true);
+            vida--;
            
 
         }
     }
 
 
-    public void AlcanzadoFalse()
-    {
-        
-        this.gameObject.GetComponent<Animator>().SetBool("Damaged", false);
-        skin.SetColor("_BaseColor", piel);
 
-    }
 }

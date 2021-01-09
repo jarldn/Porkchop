@@ -87,7 +87,7 @@ public class NPCMove : MonoBehaviour
     {
         //Debug.Log(puntoActual);
         //Debug.Log(navMeshAgent.isStopped);
-        Debug.Log(estado);
+        //Debug.Log(estado);
 
        // Buscar();
       
@@ -269,7 +269,7 @@ public class NPCMove : MonoBehaviour
             if (hitObject == objetivo.gameObject && canShoot)
             {
 
-                Debug.Log("tocado");
+                //Debug.Log("tocado");
                 proyectil = Instantiate(huevo, transform.position + offsetProyectil, Quaternion.identity);
                 Rigidbody rb = proyectil.GetComponent<Rigidbody>();
                 rb.GetComponent<Huevo>().origen = gameObject;
