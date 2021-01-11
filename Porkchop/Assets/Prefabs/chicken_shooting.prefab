@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  despiezado: {fileID: 7186812950985087636, guid: 0b28bba21bc2e214e91ceff75105f550,
+    type: 3}
 --- !u!54 &201332717
 Rigidbody:
   m_ObjectHideFlags: 0

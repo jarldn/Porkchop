@@ -6,6 +6,7 @@ public class weakPoint : MonoBehaviour
 {
     GameObject gallina;
     public  GameObject player;
+    public GameObject despiezado;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +27,7 @@ public class weakPoint : MonoBehaviour
             
             Debug.Log("Colisión");
             player.GetComponent<RelativeMovement>().bounce = true;
+            Instantiate(despiezado, transform.position, transform.rotation);
             Destroy(gallina);
         }
     }
