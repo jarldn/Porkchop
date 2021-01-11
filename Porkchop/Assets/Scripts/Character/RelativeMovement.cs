@@ -18,6 +18,7 @@ public class RelativeMovement : MonoBehaviour
     public float minFall = -1.5f;
     public bool bounce = false;
     Material skin;
+    Atributos atributos;
 
     private float _vertSpeed;
 
@@ -30,8 +31,9 @@ public class RelativeMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        skin = GetComponentInChildren<Atributos>().skin;
-        piel = GetComponentInChildren<Atributos>().piel;
+        atributos = GetComponentInChildren<Atributos>();
+        skin = atributos.skin;
+        piel = atributos.piel;
 
         _charController = GetComponent<CharacterController>();
         _vertSpeed = minFall;
@@ -46,7 +48,7 @@ public class RelativeMovement : MonoBehaviour
         float horInput = Input.GetAxis("Horizontal");
         float vertIntput = Input.GetAxis("Vertical");
 
-        if (horInput != 0 || vertIntput != 0)
+        if ((horInput != 0 || vertIntput != 0) && atributos.isAlive)
         {
             movement.x = horInput * moveSpeed;
             movement.z = vertIntput * moveSpeed;
@@ -76,7 +78,7 @@ public class RelativeMovement : MonoBehaviour
         //if (_charController.isGrounded)
         if (hitGround)
         {
-            if (Input.GetButtonDown("Jump") || bounce == true)
+            if ((Input.GetButtonDown("Jump") || bounce == true) && atributos.isAlive)
             {
                 _vertSpeed = jumpSpeed;
                 bounce = false;

@@ -8,10 +8,15 @@ public class Atributos : MonoBehaviour
     public int vida = 3;
     public Material skin;
     Animator animator;
+    public bool isAlive;
+    public bool ahogado;
+
    
     // Start is called before the first frame update
     void Start()
     {
+        ahogado = false;
+        isAlive = true;
         animator = this.GetComponentInParent<Animator>();
         piel = new Color(0.8773585f, 0.5090335f, 0.7462125f);
         skin.SetColor("_BaseColor", piel);
@@ -20,10 +25,17 @@ public class Atributos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(isAlive);
         if (vida <= 0)
         {
+            isAlive = false;
             
-            animator.SetBool("Die", true);
+            if (ahogado) animator.SetBool("Ahogado", true);
+            else 
+            {
+                animator.SetBool("Die", true);
+            }
+
         }
     }
 
@@ -38,6 +50,7 @@ public class Atributos : MonoBehaviour
            
 
         }
+
     }
 
 

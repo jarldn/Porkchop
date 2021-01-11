@@ -26,12 +26,12 @@ public class OrbitCamera : MonoBehaviour
 
     private void Update()
     {
+
         
-    
 
         if (Physics.Linecast(target.position, transform.position, out hit))
         {
-            if(hit.collider.gameObject.tag == "Player")
+            if(hit.collider.gameObject.tag == "Player" || hit.collider.gameObject.tag == "Enemy")
             {
 
             }
@@ -46,6 +46,7 @@ public class OrbitCamera : MonoBehaviour
         {
             cameraTransform.localPosition = _offsetCamera;
         }
+        Debug.Log(hit.collider.gameObject.name);
 
     }
     void LateUpdate()//se ejecuta una vez por frame después de que se hayan ejecutado todos los archivos. Así conseguimos que la cámara calcule su posición despues de saber la posición del personaje
@@ -72,6 +73,7 @@ public class OrbitCamera : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, target.position);
-       
+        Gizmos.DrawSphere(hit.point, 0.5f);
+
     }
 }
