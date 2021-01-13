@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class Menu : MonoBehaviour
         }
         else
         { canvasGroup.blocksRaycasts = canvasGroup.interactable = false; }
+    }
+
+    public void Continue()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
     }
 
 }

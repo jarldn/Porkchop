@@ -46,7 +46,7 @@ public class OrbitCamera : MonoBehaviour
         {
             cameraTransform.localPosition = _offsetCamera;
         }
-        Debug.Log(hit.collider.gameObject.name);
+        //Debug.Log(hit.collider.gameObject.name);
 
     }
     void LateUpdate()//se ejecuta una vez por frame después de que se hayan ejecutado todos los archivos. Así conseguimos que la cámara calcule su posición despues de saber la posición del personaje
