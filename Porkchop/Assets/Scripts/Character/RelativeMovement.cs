@@ -27,6 +27,8 @@ public class RelativeMovement : MonoBehaviour
     private Animator _animator;
     Color piel;
 
+    RaycastHit hit;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,8 +70,10 @@ public class RelativeMovement : MonoBehaviour
         _animator.SetFloat("Speed", movement.sqrMagnitude);
 
         bool hitGround = false;
-        RaycastHit hit;
-        if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
+
+
+        //if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
+        if (_vertSpeed < 0 && Physics.SphereCast(transform.position - new Vector3(0, -0.3f, 0), 0.3f, Vector3.down, out hit))
         {
             float check = (_charController.radius) / 1.9f;
             hitGround = hit.distance <= check; //condicional
@@ -132,6 +136,9 @@ public class RelativeMovement : MonoBehaviour
         if (_charController != null)
         {
             Gizmos.DrawLine(transform.position, transform.position + Vector3.down * (_charController.radius) / 1.9f);
+            Gizmos.DrawSphere(hit.point, 0.2f);
+
+            Gizmos.DrawLine(transform.position, hit.point);
         }
     }
     public void AlcanzadoFalse()

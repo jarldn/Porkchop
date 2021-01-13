@@ -73,7 +73,7 @@ public class OrbitCamera : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, target.position);
-        Gizmos.DrawSphere(hit.point, 0.5f);
+        //Gizmos.DrawSphere(hit.point, 0.5f);
 
     }
 }
