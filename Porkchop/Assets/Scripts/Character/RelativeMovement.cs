@@ -73,10 +73,20 @@ public class RelativeMovement : MonoBehaviour
 
 
         //if (_vertSpeed < 0 && Physics.Raycast(transform.position, Vector3.down, out hit))
-        if (_vertSpeed < 0 && Physics.SphereCast(transform.position - new Vector3(0, -0.3f, 0), 0.3f, Vector3.down, out hit))
+        if (_vertSpeed < 0 && Physics.SphereCast(transform.position - new Vector3(0, -0.3f, 0), 0.3f, Vector3.down, out hit, 1))
         {
-            float check = (_charController.radius) / 1.9f;
-            hitGround = hit.distance <= check; //condicional
+
+            if (hit.distance <= (0.2f))
+            {
+                hitGround = true;
+            }
+            else
+            {
+                hitGround = false;
+            }
+            //float check = (_charController.radius) / 1.9f;
+            //hitGround = hit.distance <= check; //condicional
+
         }
 
         //if (_charController.isGrounded)
