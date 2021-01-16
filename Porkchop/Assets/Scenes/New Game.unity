@@ -1519,6 +1519,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1325514973}
+    - target: {fileID: 2226570418846231560, guid: 8da5e0b8f4297c34b8ddd31b5200811d,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.166
+      objectReference: {fileID: 0}
     - target: {fileID: 2351815974884845495, guid: 8da5e0b8f4297c34b8ddd31b5200811d,
         type: 3}
       propertyPath: m_IsTrigger
