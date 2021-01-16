@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 32c3807f67d0605438fa9a458199c83f
+guid: e619117f67bbef04e8598586e8436c09
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -24,6 +24,9 @@ ModelImporter:
   - first:
       74: 4273913164836960208
     second: Sentado
+  - first:
+      74: -3207822431338374250
+    second: Drown
   externalObjects: {}
   materials:
     materialImportMode: 1

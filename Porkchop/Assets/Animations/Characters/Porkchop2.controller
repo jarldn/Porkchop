@@ -74,8 +74,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -1500354584072067147, guid: e916e1e66fa0d4f47b3f13e5a40d1629,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 14ebb47485e6f8f45a97bb6688a418dc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -245,7 +244,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 445535688197310311, guid: e916e1e66fa0d4f47b3f13e5a40d1629, type: 3}
+  m_Motion: {fileID: 7400000, guid: 800f8025632a1734ca0fa38bdf0d2c74, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -258,7 +257,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Falling
+  m_Name: Drowning
   m_Speed: 2.43
   m_CycleOffset: 0
   m_Transitions: []
@@ -271,8 +270,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -1500354584072067147, guid: e916e1e66fa0d4f47b3f13e5a40d1629,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 39f6b81c930206742ae4538436e247d2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -300,7 +298,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8326ec6915ffec64c9d369b21486cda1, type: 2}
+  m_Motion: {fileID: 7400000, guid: 558f8d689d923fc42a4e746b095cea8f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
