@@ -29,4 +29,21 @@ public class SoundPorkchop : MonoBehaviour
         audioSource.pitch = Random.Range(0.8f, 1.2f);
         audioSource.PlayOneShot(clips[1]);
     }
+    private void Oink()
+    {
+        audioSource.pitch = 1;
+        audioSource.PlayOneShot(clips[2]);
+    }
+    private void Scream()
+    {
+        audioSource.pitch = 1;
+        //audioSource.volume = 1;
+        audioSource.PlayOneShot(clips[3]);
+    }
+    private void Die()
+    {
+        audioSource.pitch = 1;
+        //audioSource.volume = 1;
+        audioSource.PlayOneShot(clips[4]);
+    }
 }
