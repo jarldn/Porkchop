@@ -28,8 +28,9 @@ public class RelativeMovement : MonoBehaviour
     Color piel;
 
     RaycastHit hit;
+    LevelChanger levelChanger;
 
-    bool canMove = true;
+   
 
 
     // Start is called before the first frame update
@@ -42,7 +43,7 @@ public class RelativeMovement : MonoBehaviour
         _charController = GetComponent<CharacterController>();
         _vertSpeed = minFall;
         _animator = GetComponent<Animator>();
-
+        levelChanger = GameObject.Find("Level Changer").GetComponent<LevelChanger>();
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class RelativeMovement : MonoBehaviour
         float horInput = Input.GetAxis("Horizontal");
         float vertIntput = Input.GetAxis("Vertical");
 
-        if ((horInput != 0 || vertIntput != 0) && atributos.isAlive && canMove)
+        if ((horInput != 0 || vertIntput != 0) && atributos.isAlive && levelChanger.fadeInDone)
         {
             movement.x = horInput * moveSpeed;
             movement.z = vertIntput * moveSpeed;
@@ -94,7 +95,7 @@ public class RelativeMovement : MonoBehaviour
         //if (_charController.isGrounded)
         if (hitGround)
         {
-            if ((Input.GetButtonDown("Jump") || bounce == true) && atributos.isAlive)
+            if ((Input.GetButtonDown("Jump") || bounce == true) && atributos.isAlive && levelChanger.fadeInDone)
             {
                 _vertSpeed = jumpSpeed;
                 bounce = false;
@@ -161,9 +162,5 @@ public class RelativeMovement : MonoBehaviour
 
     }
 
-    public void unFreeze()
-    {
-        canMove = true;
-    }
 
 }

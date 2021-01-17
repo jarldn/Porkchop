@@ -4,6 +4,7 @@ using UnityEngine;
 public class LevelChanger : MonoBehaviour
 {
     public Animator animator;
+    public bool fadeInDone = false;
 
     private int levelToLoad;
 
@@ -26,6 +27,11 @@ public class LevelChanger : MonoBehaviour
     public void onFadeComplete()
     {
         SceneManager.LoadScene(levelToLoad);
+    }
+
+    public void FadeInDone()
+    {
+        fadeInDone = true;
     }
 
 
