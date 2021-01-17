@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/New Game.unity
     guid: 1afa8641a5253394b98678a0aefb36e4
   - enabled: 1
-    path: Assets/Scenes/IA.unity
-    guid: ecbbf7da606b0c641a8f7523e0475f71
-  - enabled: 1
-    path: "Assets/Scenes/PruebaMen\xFA.unity"
-    guid: e5c9e734a59a2a64fbffbbbe95c26363
+    path: Assets/Scenes/GameOver.unity
+    guid: b1258feb6aa834b4e9a0fba78b1ef2b3
   m_configObjects: {}

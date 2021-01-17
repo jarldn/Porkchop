@@ -11,6 +11,8 @@ public class Atributos : MonoBehaviour
     public bool isAlive;
     public bool ahogado;
 
+    LevelChanger levelChanger;
+
    
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class Atributos : MonoBehaviour
         animator = this.GetComponentInParent<Animator>();
         piel = new Color(0.8773585f, 0.5090335f, 0.7462125f);
         skin.SetColor("_BaseColor", piel);
+        levelChanger = GameObject.Find("Level Changer").GetComponent<LevelChanger>();
     }
 
     // Update is called once per frame
@@ -35,6 +38,8 @@ public class Atributos : MonoBehaviour
             {
                 animator.SetBool("Die", true);
             }
+
+            levelChanger.fadeToScene(2);
 
         }
     }

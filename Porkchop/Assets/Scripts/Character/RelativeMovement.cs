@@ -29,6 +29,8 @@ public class RelativeMovement : MonoBehaviour
 
     RaycastHit hit;
 
+    bool canMove = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,7 @@ public class RelativeMovement : MonoBehaviour
         atributos = GetComponentInChildren<Atributos>();
         skin = atributos.skin;
         piel = atributos.piel;
-
+        
         _charController = GetComponent<CharacterController>();
         _vertSpeed = minFall;
         _animator = GetComponent<Animator>();
@@ -50,7 +52,7 @@ public class RelativeMovement : MonoBehaviour
         float horInput = Input.GetAxis("Horizontal");
         float vertIntput = Input.GetAxis("Vertical");
 
-        if ((horInput != 0 || vertIntput != 0) && atributos.isAlive)
+        if ((horInput != 0 || vertIntput != 0) && atributos.isAlive && canMove)
         {
             movement.x = horInput * moveSpeed;
             movement.z = vertIntput * moveSpeed;
@@ -157,6 +159,11 @@ public class RelativeMovement : MonoBehaviour
         _animator.SetBool("Damaged", false);
         skin.SetColor("_BaseColor", piel);
 
+    }
+
+    public void unFreeze()
+    {
+        canMove = true;
     }
 
 }
