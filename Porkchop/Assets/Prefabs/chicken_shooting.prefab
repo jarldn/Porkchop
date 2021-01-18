@@ -703,7 +703,6 @@ MonoBehaviour:
   puntosDestino:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   objetivo: {fileID: 0}
   rotationSpeed: 5
   huevo: {fileID: 6679071165754740687, guid: dbd99ac441f78784eb4d00f60f386c29, type: 3}
@@ -844,7 +843,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 6f570022f325fb4429d50f7c70367bfb, type: 3}
+  - {fileID: 2100000, guid: 9e8904438faf0f9438616bdaa387be57, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

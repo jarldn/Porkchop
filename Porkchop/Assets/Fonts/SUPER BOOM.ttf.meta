@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Super Boom
   fontNames:
   - Super Boom
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a73d0f080a0b82b4c9a4ccae13388f9b, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
