@@ -619,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077113e446c64104d964156021f38185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  piel: {r: 0, g: 0, b: 0, a: 0}
+  piel: {r: 0.9056604, g: 0.38875046, b: 0.7214152, a: 1}
   vida: 3
   skin: {fileID: 2100000, guid: 206d364a9cead1e438e0d5b8e9595194, type: 2}
   isAlive: 0

@@ -159,6 +159,7 @@ public class RelativeMovement : MonoBehaviour
 
         _animator.SetBool("Damaged", false);
         skin.SetColor("_BaseColor", piel);
+       
 
     }
 
