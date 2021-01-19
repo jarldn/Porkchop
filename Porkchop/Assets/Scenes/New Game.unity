@@ -10657,8 +10657,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 9.5, y: 6.7939305, z: 4.404771}
-  m_Center: {x: -0.008217085, y: 0.01516164, z: 5.2345414}
+  m_Size: {x: 10.292973, y: 1.0157764, z: 4.404766}
+  m_Center: {x: -0.40470177, y: -2.8738992, z: 5.2345123}
 --- !u!64 &715656587
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -31093,46 +31093,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.00012207031
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: -0.00061035156
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1.0001221
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5285521372176525963, guid: 579723739ecf1a54583ea7c41e3fbec5,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5285521372472100295, guid: 579723739ecf1a54583ea7c41e3fbec5,
         type: 3}
       propertyPath: m_LocalPosition.z
